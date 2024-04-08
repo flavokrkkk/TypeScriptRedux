@@ -12,14 +12,17 @@ interface TodoFetchAction {
 
 interface TodoFetchSuccessAction {
     type: TodoActionTypes.FETCH_TODOS_SUCCESS
+    payload: any[]
 }
 
 interface TodoFetchErrorAction {
     type: TodoActionTypes.FETCH_TODOS_ERROR
+    payload: string
 }
 
 interface TodoFetchPageAction {
     type: TodoActionTypes.FETCH_TODOS_PAGE
+    payload: number
 }
 
 export type TodoActions = TodoFetchAction | TodoFetchSuccessAction | TodoFetchErrorAction | TodoFetchPageAction
